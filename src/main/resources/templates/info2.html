@@ -11,6 +11,7 @@
 </head>
 <body>
 <h1>Info......</h1>
+<a th:href="@{/toAdd}">添加course-record</a>
 <table border="1">
     <thead>
     <tr>
@@ -20,10 +21,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="user : ${userModel.userList}">
-        <td th:text="${user.UserId}"></td>
-        <td th:text="${user.UserName}"></td>
-        <td th:text="${user.Userbook}"></td>
+    <tr th:each="course : ${courseModel.courseList}">
+        <td th:text="${course.id}"></td>
+        <td th:text="${course.name}"></td>
+        <td th:text="${course.dept}"></td>
     </tr>
     </tbody>
 </table>
