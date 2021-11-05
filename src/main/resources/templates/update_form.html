@@ -9,15 +9,16 @@
 <body>
 
 <form name="update-form" th:action="@{/update}" method="post">
+    <input name="id" type="hidden" th:value="${course.id}">
     <table border="1">
         <tr>
             <th>课程修改</th>
         </tr>
         <tr>
-            <td>课程名：<input name="name" type="text"/></td>
+            <td>课程名：<input name="name" type="text" th:value="${course.name}"/></td>
         </tr>
         <tr>
-            <td>学院：<input name="dept" type="text"/></td>
+            <td>学院：<input name="dept" type="text" th:value="${course.dept}"/></td>
         </tr>
         <tr>
             <td><input type="submit" value="保存"/></td>
