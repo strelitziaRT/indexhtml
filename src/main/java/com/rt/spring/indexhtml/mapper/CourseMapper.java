@@ -16,9 +16,13 @@ public interface CourseMapper {
     @Options(keyProperty="course.id",useGeneratedKeys=true)
     public void addCourse(@Param("course")Course course);
 
-    @Update("update CourseTable set name=#{name} where id=#{id}")
-    public void updateCourseNameById(@Param("name")String name,@Param("id")int id);
+    @Update("update CourseTable set name=#{course.name},dept=#{course.dept} where id=#{course.id}")
+    public void updateCourseNameById(@Param("course")Course course);
 
     @Delete("delete from CourseTable where id=#{id}")
     public void delById(@Param("id") int id);
+
+    @Select("select * from CourseTable where id =#{id}")
+    public Course get(int id);
+
 }

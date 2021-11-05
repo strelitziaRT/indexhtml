@@ -21,4 +21,16 @@ public class CourseService {
     public void addCourse(Course course){
         courseMapper.addCourse(course);
     }
+
+    public void updateCourseNameById(Course course){
+        courseMapper.updateCourseNameById(course);
+    }
+
+    public void delById(int id){
+        courseMapper.delById(id);
+    }
+
+    public Course get(int id){
+        return courseMapper.get(id);
+    }
 }

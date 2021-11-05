@@ -18,6 +18,7 @@
         <td>ID</td>
         <td>名字</td>
         <td>dept</td>
+        <td>操作</td>
     </tr>
     </thead>
     <tbody>
@@ -25,6 +26,8 @@
         <td th:text="${course.id}"></td>
         <td th:text="${course.name}"></td>
         <td th:text="${course.dept}"></td>
+        <td ><a th:href="@{/toUpdate(id=${course.id})}">修改</a>&nbsp;&nbsp;<a th:href="@{/delete(id=${course.id})}">删除</a></td>
+
     </tr>
     </tbody>
 </table>
